@@ -16,6 +16,8 @@
 
 .container_corpo{
     height: 70vh;
+    background: rgb(23,162,184);
+    background: linear-gradient(125deg, rgba(23,162,184,1) 35%, rgba(255,255,255,1) 100%);
 }
 
 .container_corpo img{
