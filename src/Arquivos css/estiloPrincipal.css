@@ -1,0 +1,23 @@
+.container_head {
+    height: 20vh;
+}
+
+.container_head .container_logo{
+    height: 20vh;
+}
+
+.container_head img{
+    height: 18vh;
+}
+
+.container_head h1{
+    font-family:'Times New Roman', Times, serif;
+}
+
+.container_corpo{
+    height: 70vh;
+}
+
+.container_corpo img{
+    height: 60vh;
+}
