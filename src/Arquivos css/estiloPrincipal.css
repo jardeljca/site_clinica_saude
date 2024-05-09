@@ -23,3 +23,14 @@
 .container_corpo img{
     height: 60vh;
 }
+
+@media screen and (max-width: 768px) {
+    .conteiner {
+        display: block;
+        background-image: none;
+    }
+
+    .conteiner__imagem {
+        width: 50vw;
+    }
+}
