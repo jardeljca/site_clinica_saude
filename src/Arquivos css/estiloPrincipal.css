@@ -1,19 +1,19 @@
+/* Tamanho do container header será sempre 20% da altura total da tela, independete do tamanho da mesma */
 .container_head {
     height: 20vh;
 }
 
-.container_head .container_logo{
-    height: 20vh;
-}
-
+/* Tamanho da logo do header */
 .container_head img{
-    height: 18vh;
+    height: 120px;
 }
 
+/* Estilização da fonte do h1 com nome da clinica */
 .container_head h1{
-    font-family:'Times New Roman', Times, serif;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
 }
 
+/* Tamanho do container corpo será sempre 70% da altura total da tela, independete do tamanho da mesma  */
 .container_corpo{
     height: 70vh;
     margin: auto;
@@ -22,8 +22,131 @@
     background: linear-gradient(125deg, rgba(23,162,184,1) 35%, rgba(255,255,255,1) 100%);
 }
 
+.dropdown{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Tamanho da fonte do menu droppdoown */
+.dropdown .dropdown-menu{
+    font-size: 13px;
+}
+
+/* Tamanho da imagem do boneco */
 .container_corpo img{
-    height: 60vh;
+    height: 200px;
+}
+
+/* ################################################################################# */
+/* Aqui estão as configurações responsivas para telas maiores que 601px e menores que 800px */
+@media screen and (min-width: 601px) and (max-width: 800px) {
+
+/* Tamanho da logo do header */
+.container_head img{
+    height: 110px;
+}
+
+/* Estilização do tamanho do h1 com nome da clinica */
+.container_head h1{
+    font-size: 25px;
+}
+
+/* Tamanho da fonte do menu droppdoown */
+.dropdown .dropdown-menu{
+    font-size: 14px;
+}
+
+/* Tamanho da imagem do boneco */
+.container_corpo img{
+    height: 150px;
+}
+
+.container_footer p{
+    font-size: 12px;
+}
+}
+/* ################################################################################# */
+/* Aqui estão as configurações responsivas para telas maiores que 371px e menores que 600px */
+@media screen and (min-width: 371px) and (max-width: 600px) {
+
+/* Tamanho da logo no reader */
+.container_head img{
+    height: 90px;
+}
+
+/* Estilização do tamanho do h1 com nome da clinica */
+.container_head h1{
+    font-size: 18px;
+}
+
+.dropdown .btn{
+    font-size: 14px;
+    white-space: pre-line;
+    padding: 0;
+}
+
+/* Tamanho da fonte do menu droppdoown */
+.dropdown .dropdown-menu{
+    font-size: 13px;
+}
+
+/* Tamanho da imagem definida */
+.container_corpo img{
+    height: 150px;
+}
+
+.container_corpo p{
+    font-size: 15px;
+}
+
+.container_footer p{
+    font-size: 12px;
+}
+}
+/* ################################################################################# */
+/* Aqui estão as cpnfigurações responsivas para telas maiores que 261px e menores que 370px */
+@media screen and (min-width: 261px) and (max-width: 370px) {
+
+    /* Tamanho da logo no reader */
+.container_head img{
+    height: 50px;
+}
+
+/* Estilização do tamanho do h1 com nome da clinica */
+.container_head h1{
+    font-size: 15px;
+}
+
+.dropdown .btn{
+    font-size: 13px;
+    white-space: pre-line;
+    padding: 0;
+}
+
+/* Tamanho da fonte do menu droppdoown */
+.dropdown .dropdown-menu{
+    font-size: 12px;
+}
+
+/* Tamanho da imagem definida */
+.container_corpo img{
+    height: 120px;
+}
+
+.container_corpo p{
+    font-size: 12px;
+}
+
+.container_footer p{
+    font-size: 9px;
+}
+}
+/* ################################################################################# */
+/* Aqui estão as configurações responsivas para telas menores que 260px */
+@media screen and (min-width: 100px) and (max-width: 260px) {
+        body{
+            display: none;
+        }
 }
 
 @media screen and (max-width: 768px) {
