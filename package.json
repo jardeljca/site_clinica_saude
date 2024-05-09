@@ -1,0 +1,12 @@
+{
+  "name": "site_clinica_saude",
+  "version": "1.0.0",
+  "description": "Site desenvolvido como trabalho final da cadeira de desenvolvimento para plataformas web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
