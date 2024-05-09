@@ -33,4 +33,8 @@
     .conteiner__imagem {
         width: 50vw;
     }
+
+    .continer__caixa {
+        margin: 2em 2em;
+    }
 }
