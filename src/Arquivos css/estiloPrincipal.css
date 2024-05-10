@@ -1,10 +1,16 @@
 /* Tamanho do body e html */
 
-html, body{
+html{
     height: 100vh;
     width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+body{
+    width: 90vw;
+}
 
 /* Tamanho do container header será sempre 20% da altura total da tela, independete do tamanho da mesma */
 .container_head {
@@ -23,8 +29,7 @@ html, body{
 
 /* Tamanho do container corpo será sempre 70% da altura total da tela, independete do tamanho da mesma  */
 .container_corpo{
-    height: 70vh;
-    margin: auto;
+    height: 67vh;
     font-size: 85%;
     background: rgb(23,162,184);
     background: linear-gradient(125deg, rgba(23,162,184,1) 35%, rgba(255,255,255,1) 100%);
@@ -68,6 +73,10 @@ html, body{
     padding: 20px;
     color: #000;
     border: 1px solid black;
+}
+
+.container_footer{
+    height: 10vh;
 }
 
 /* ################################################################################# */
