@@ -52,8 +52,13 @@ html, body{
 
 /* Estilização do formulario das telas de login e cadastro */
 
+.formulario h3{
+    color: #fff;
+}
+
 .formulario{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
