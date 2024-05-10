@@ -14,4 +14,4 @@ app.get('/', (req, res) => {
 
 })
 
-APP.LISTEN(3000)
+app.listen(3000)
