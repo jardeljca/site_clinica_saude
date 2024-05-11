@@ -1,3 +1,17 @@
+/* Tamanho do body e html */
+
+html{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body{
+    width: 90vw;
+}
+
 /* Tamanho do container header será sempre 20% da altura total da tela, independete do tamanho da mesma */
 .container_head {
     height: 20vh;
@@ -15,8 +29,7 @@
 
 /* Tamanho do container corpo será sempre 70% da altura total da tela, independete do tamanho da mesma  */
 .container_corpo{
-    height: 70vh;
-    margin: auto;
+    height: 67vh;
     font-size: 85%;
     background: rgb(23,162,184);
     background: linear-gradient(125deg, rgba(23,162,184,1) 35%, rgba(255,255,255,1) 100%);
@@ -32,9 +45,38 @@
     font-size: 13px;
 }
 
+/* A estilização do botão abaixo é referente aos botões presente nos cabeçakhos apenas das páginas de login e cadastro */
+.container_corpo .btn{
+    cursor: pointer;
+}
+
 /* Tamanho da imagem do boneco */
 .container_corpo img{
     height: 200px;
+}
+
+/* Estilização do formulario das telas de login e cadastro */
+
+.formulario h3{
+    color: #fff;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_corpo form{
+    width: 500px;
+    padding: 20px;
+    color: #000;
+    border: 1px solid black;
+}
+
+.container_footer{
+    height: 10vh;
 }
 
 /* ################################################################################# */
@@ -59,6 +101,12 @@
 /* Tamanho da imagem do boneco */
 .container_corpo img{
     height: 150px;
+}
+
+/* Estilização do formulario das telas de login e cadastro */
+
+.container_corpo form{
+    width: 400px;
 }
 
 .container_footer p{
@@ -90,6 +138,12 @@
     font-size: 13px;
 }
 
+/* A estilização do botão abaixo é referente aos botões presente nos cabeçakhos apenas das páginas de login e cadastro */
+.botao{
+    white-space: pre-line;
+    font-size: 14px;
+}
+
 /* Tamanho da imagem definida */
 .container_corpo img{
     height: 150px;
@@ -97,6 +151,12 @@
 
 .container_corpo p{
     font-size: 15px;
+}
+
+/* Estilização do formulario das telas de login e cadastro */
+
+.container_corpo form{
+    width: 250px;
 }
 
 .container_footer p{
@@ -128,6 +188,12 @@
     font-size: 12px;
 }
 
+/* A estilização do botão abaixo é referente aos botões presente nos cabeçakhos apenas das páginas de login e cadastro */
+.botao{
+    white-space: pre-line;
+    font-size: 12px;
+}
+
 /* Tamanho da imagem definida */
 .container_corpo img{
     height: 120px;
@@ -135,6 +201,12 @@
 
 .container_corpo p{
     font-size: 12px;
+}
+
+/* Estilização do formulario das telas de login e cadastro */
+
+.container_corpo form{
+    width: 200px;
 }
 
 .container_footer p{
@@ -147,12 +219,4 @@
         body{
             display: none;
         }
-}
-
-@media screen and (max-width: 768px) {
-    body {
-        display: block;
-        background-image: none;
-    }
-
 }
