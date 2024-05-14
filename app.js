@@ -12,6 +12,10 @@ const app = express()
 
 app.use(express.json())
 
+//Models
+
+const User = require('./models/User')
+
 // Rotas publicas
 app.get('/', (req, res) => {
     res.status(200).json({ msg:  'BEM VINDO A API'})
