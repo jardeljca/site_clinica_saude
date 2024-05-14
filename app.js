@@ -8,11 +8,30 @@ const jwt =require('jsonwebtoken')
 
 const app = express()
 
+//configurando jsom para respostas
+
+app.use(express.json())
+
 // Rotas publicas
 app.get('/', (req, res) => {
     res.status(200).json({ msg:  'BEM VINDO A API'})
 
 })
+
+//Registro de usuarios
+
+app.post('/autentic/registro', async(rec,res) =>
+    {
+        const{nome, email, senha, confirmsenha} = req.body
+
+        //validação
+
+        if (!nome) {
+            return.res.status(422).json({msn : o campo nome é obrigatório})
+        }
+    }  
+
+)
 
 //Credenciais
 const dbUser = process.env.DB_USER
