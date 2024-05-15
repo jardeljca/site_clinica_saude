@@ -24,18 +24,16 @@ app.get('/', (req, res) => {
 
 //Registro de usuarios
 
-app.post('/autentic/registro', async(rec,res) =>
+app.post('/autentic/registro', async(req, res) =>
     {
         const{nome, email, senha, confirmsenha} = req.body
 
         //validação
 
         if (!nome) {
-            return.res.status(422).json({msn : o campo nome é obrigatório})
+            return res.status(422).json({msn : 'o campo nome é obrigatório'})
         }
-    }  
-
-)
+    })
 
 //Credenciais
 const dbUser = process.env.DB_USER
