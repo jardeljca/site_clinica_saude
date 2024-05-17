@@ -12,7 +12,7 @@ const app = express()
 
 app.use(express.json())
 
-//Models
+//Modelos
 
 const User = require('./models/User')
 
@@ -40,7 +40,8 @@ const dbUser = process.env.DB_USER
 const dbPassword = process.env.DB_PASS
 
 mongoose
-    .connect(`mongodb+srv://${dbUser}:${dbPassword}@cluster0.c6q0kv2.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`)
+    .connect(`mongodb+srv://${dbUser}:${dbPassword}@cluster0.i8mtmfn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`)
+    //mongodb+srv://engerproducao:<password>@cluster0.i8mtmfn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
     .then(() => {
     app.listen(3000)
     console.log('Conecção com sucesso ao BD')
