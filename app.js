@@ -12,7 +12,7 @@ const app = express()
 
 app.use(express.json())
 
-//Modelos
+//Models
 
 const User = require('./models/User')
 
@@ -33,6 +33,31 @@ app.post('/autentic/registro', async(req, res) =>
         if (!nome) {
             return res.status(422).json({msn : 'o campo nome é obrigatório'})
         }
+
+        if (!email) {
+            return res.status(422).json({msn : 'o campo Email é obrigatório'})
+        }
+
+        if (!senha) {
+            return res.status(422).json({msn : 'o campo Senha é obrigatório'})
+        }
+
+        if (senha !== confirmsenha) {
+            return res.status(422).json({msn : 'o campo Senha e Confirme seua senha estam diferentes!'})
+        }
+
+        //checar se usuario existe
+
+        const userExists = await User.findOne({email: email})
+
+        if (userExists) {
+            return res.status(422).json({msn : 'Este email já existe, por favor usar outro'})
+        }
+
+        //Creando Senha
+
+        const salt =await bcrypt.genSalt(12)
+        const passwordHash = await 
     })
 
 //Credenciais
