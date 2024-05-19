@@ -18,40 +18,59 @@ const User = require('./models/User')
 
 // Rotas publicas
 app.get('/', (req, res) => {
-    res.status(200).json({ msg:  'BEM VINDO A API'})
+    res.render("telaLogin")
 
 })
 
+app.get('/telaCadastro', (req, res) => {
+    res.render("telaCadastro")
+
+})
+
+
 //Registro de usuarios
 
-app.post('/autentic/registro', async(req, res) =>
+app.post('/telaCadastro', async(req, res) =>
     {
-        const{nome, email, senha, confirmsenha} = req.body
+        const data = {
+            name:req.body.name, 
+            sobrenome: req.body.sobre,
+            email: req.body.email, 
+            senha: req.body.senha 
+        } 
+
+        
 
         //validação
 
-        if (!nome) {
-            return res.status(422).json({msn : 'o campo nome é obrigatório'})
+        if (!name) {
+            return res.send({msn : 'o campo nome é obrigatório'})
         }
 
         if (!email) {
-            return res.status(422).json({msn : 'o campo Email é obrigatório'})
+            return res.send({msn : 'o campo Email é obrigatório'})
         }
 
         if (!senha) {
-            return res.status(422).json({msn : 'o campo Senha é obrigatório'})
-        }
-
-        if (senha !== confirmsenha) {
-            return res.status(422).json({msn : 'o campo Senha e Confirme seua senha estam diferentes!'})
+            return res.send({msn : 'o campo Senha é obrigatório'})
         }
 
         //checar se usuario existe
 
-        const userExists = await User.findOne({email: email})
+        const userExists = await User.findOne({name: data.name})
 
         if (userExists) {
-            return res.status(422).json({msn : 'Este email já existe, por favor usar outro'})
+            return res.send({msn : 'Este usuario já existe, por favor usar outro nome'})
+        }else {
+
+        //criptogafia 
+            const saltRounds =10 //numero de saltos para bcrypt
+            const hashedPassword = await bcrypt.hash(data.senha, saltRounds) 
+
+            data.senha =hashedPassword //
+
+            const userdata = await collection.insertMany(data)
+            console.log(userdata)
         }
 
         //Creando Senha
@@ -60,7 +79,31 @@ app.post('/autentic/registro', async(req, res) =>
         const passwordHash = await 
     })
 
-//Credenciais
+    //login do Usuario
+
+    app.post('/telaLogin', async(req, res) => {
+        try{
+
+            const check = await collection.findOne({nome: req.body.name})
+            if(!check) {
+                res.send("Esse nome não é valido!")
+
+            }
+            //comparando a hash senha com a do bd
+
+            const isPasswordMatch = await bcrypt.compare(req.body.senha, check.senha)
+            if(isPasswordMatch){
+                res.render('gestaoAdm')
+            }else {
+                req.send('Senha incorreta!')
+            }
+        }catch{
+            req.send('checagem incorreta, tente novamente')
+        }
+
+
+        })
+    //Credenciais
 const dbUser = process.env.DB_USER
 const dbPassword = process.env.DB_PASS
 
