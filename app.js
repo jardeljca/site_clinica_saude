@@ -33,14 +33,13 @@ app.get('/telaCadastro', (req, res) => {
 app.post('/telaCadastro', async(req, res) =>
     {
         const data = {
-            name:req.body.name, 
+            name: req.body.name, 
             sobrenome: req.body.sobre,
             email: req.body.email, 
             senha: req.body.senha 
         } 
 
         
-
         //validação
 
         if (!name) {
@@ -101,8 +100,8 @@ app.post('/telaCadastro', async(req, res) =>
             req.send('checagem incorreta, tente novamente')
         }
 
-
         })
+
     //Credenciais
 const dbUser = process.env.DB_USER
 const dbPassword = process.env.DB_PASS
