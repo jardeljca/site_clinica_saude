@@ -2,11 +2,14 @@
 require('dotenv').config()
 
 const express = require('express')
+const session = require('express-session')
+const app = express()
+
+const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 
-const app = express()
 
 //configurando jsom para respostas
 
@@ -83,7 +86,7 @@ app.post('/telaCadastro', async(req, res) =>
     app.post('/telaLogin', async(req, res) => {
         try{
 
-            const check = await collection.findOne({nome: req.body.name})
+            const check = await collection.findOne({name: req.body.name})
             if(!check) {
                 res.send("Esse nome não é valido!")
 
