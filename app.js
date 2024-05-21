@@ -2,15 +2,28 @@
 require('dotenv').config()
 
 const express = require('express')
+const session = require('express-session')
+const app = express()
+
+const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 
-const app = express()
 
 //configurando jsom para respostas
 
 app.use(express.json())
+
+//uso sessão back  -chamado 
+
+app.use(session({secret:'fe123456'}))
+app.use(bodyParser.urlencoded({extended:true}))
+
+app.engine('html', require('ejs').renderFile)
+app.set('view engine', 'html')
+app.use('/src', express.static(path.join(__dirname, 'src')))
+app.set('views', path.join(__dirname, '/'))
 
 //Models
 
@@ -18,16 +31,31 @@ const User = require('./models/User')
 
 // Rotas publicas
 app.get('/', (req, res) => {
-    res.render("telaLogin")
-
+    if (req.session.name) {
+        res.render('gestaoAdm', {name: name})
+        console.log('Usuário Logado: '+ req.session.name)
+    } else {
+        console.log('index')  
+    }
+    
 })
 
 app.get('/telaCadastro', (req, res) => {
     res.render("telaCadastro")
+    res.render(index)
 
 })
 
+app.post('/',(req, res) =>{
+    if (req.body.senha == senha && req.body.name == name) {
+        //logado ok.
+        req.session.name = name
+    }
+})
 
+app.listen(port,() => {
+    console.log('servidor rodando')
+})
 //Registro de usuarios
 
 app.post('/telaCadastro', async(req, res) =>
