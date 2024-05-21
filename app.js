@@ -83,7 +83,7 @@ app.post('/telaCadastro', async(req, res) =>
     app.post('/telaLogin', async(req, res) => {
         try{
 
-            const check = await collection.findOne({nome: req.body.name})
+            const check = await collection.findOne({name: req.body.name})
             if(!check) {
                 res.send("Esse nome não é valido!")
 
@@ -103,10 +103,11 @@ app.post('/telaCadastro', async(req, res) =>
         })
 
     //Credenciais
-const dbUser = process.env.DB_USER
-const dbPassword = process.env.DB_PASS
+    const dbUser = process.env.DB_USER
+    const dbPassword = process.env.DB_PASS
 
 mongoose
+
     .connect(`mongodb+srv://${dbUser}:${dbPassword}@cluster0.i8mtmfn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`)
     //mongodb+srv://engerproducao:<password>@cluster0.i8mtmfn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
     .then(() => {
