@@ -16,6 +16,9 @@ import User from './models/User'
 
 app.use(express.json())
 
+//models
+const User = require('./models/User')
+
 //uso sessão back  -chamado 
 
 app.use(session({ secret: 'fe123456' }))
@@ -56,13 +59,14 @@ app.listen(port, () => {
 })
 //Registro de usuarios
 
-app.post('/users', async (req, res) => {
+const user = new User(
+    {
+        name,
+        sobre,
+        senha,
+    }
+)
 
-    const user = request.body
-    const newUser = await User.create user
-    return response.json newUser
-
-})
 
 
 //validação
