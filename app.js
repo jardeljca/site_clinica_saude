@@ -109,7 +109,7 @@ const passwordHash = await
 
     //login do Usuario
 
-    app.post('/telaLogin', async (req, res) => {
+    app.post('/login', async (req, res) => {
         try {
 
             const check = await collection.findOne({ name: req.body.name })
