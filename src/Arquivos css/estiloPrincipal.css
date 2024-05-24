@@ -31,7 +31,6 @@ body{
 .container_corpo{
     height: 67vh;
     font-size: 85%;
-    background: rgb(23,162,184);
     background: linear-gradient(125deg, rgba(23,162,184,1) 35%, rgba(255,255,255,1) 100%);
 }
 
@@ -75,6 +74,70 @@ body{
     border: 1px solid black;
 }
 
+/* Estilização do corpo da tela de gesta adm */
+
+.container_corpo .conteudo_corpo{
+    display: flex;
+    width: 100%;
+    height: 70%;
+}
+
+.container_corpo .botoes{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteudo_corpo .btn{
+    width: 60%;
+    margin: 20px;
+    border: #000 solid 1px;
+    border-radius: 20px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #6CC4D2;
+}
+
+.conteudo_corpo .btn:hover{
+    background-color: #DBE7E8;
+}
+
+.container_corpo .news{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: linear-gradient(125deg, rgba(23,162,184,1) 35%, rgba(255,255,255,1) 100%);
+}
+
+.container_corpo .noticias{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+
+.conteudo_corpo .corpo_news{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.conteudo_corpo a{
+    word-wrap: break-word;
+    font-weight: bold;
+}
+
+
+/* Estilização do footer */
 .container_footer{
     height: 10vh;
 }
