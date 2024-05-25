@@ -47,16 +47,7 @@ app.get('/telaCadastro', (req, res) => {
 
 })
 
-app.post('/', (req, res) => {
-    if (req.body.senha == senha && req.body.name == name) {
-        //logado ok.
-        req.session.name = name
-    }
-})
 
-app.listen(port, () => {
-    console.log('servidor rodando')
-})
 //Registro de usuarios
 
 const user = new User(
