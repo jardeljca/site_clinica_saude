@@ -35,14 +35,14 @@
     <div class="row">
       <form class="form" id="form" action="http://localhost:3000/login" method="post">
         <div class="row">
-          <div class="col erro sucesso">
+          <div class="col formControl">
             <label for="nome">Nome</label>
-            <input type="text" name="name" class="form-control" placeholder="Nome" id="nome">
+            <input type="text" name="name" class="form-control" placeholder="Nome" id="nome" autocomplete="name">
             <i class="fa-solid fa-circle-exclamation"></i>
             <i class="fa-solid fa-circle-check"></i>
             <small>Mensagem de erro</small>
           </div>
-          <div class="col erro sucesso">
+          <div class="col formControl">
             <label for="sobrenome">Sobrenome</label>
             <input type="text" name="sobre" class="form-control" placeholder="Sobrenome" id="sobrenome">
             <i class="fa-solid fa-circle-exclamation"></i>
@@ -50,7 +50,7 @@
             <small>Mensagem de erro</small>
           </div>
         </div><br>
-        <div class="form-group erro sucesso">
+        <div class="form-group formControl">
           <label for="email">Endereço de email</label>
           <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp"
             placeholder="Seu email">
@@ -58,14 +58,14 @@
             <i class="fa-solid fa-circle-check"></i>
           <small>Mensagem de erro</small>
         </div>
-        <div class="form-group erro sucesso">
+        <div class="form-group formControl">
           <label for="senha">Senha</label>
           <input type="password" name="senha" class="form-control" id="senha" placeholder="Senha">
           <i class="fa-solid fa-circle-exclamation"></i>
           <i class="fa-solid fa-circle-check"></i>
           <small>Mensagem de erro</small>
         </div>
-        <div class="form-group erro sucesso">
+        <div class="form-group formControl">
           <label for="confirmacaoSenha">Confirmação de senha</label>
           <input type="password" name="senha" class="form-control" id="confirmacaoSenha"
             placeholder="Repita a senha">
@@ -100,6 +100,7 @@
     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/bf08065381.js" crossorigin="anonymous"></script>
+  <script src="./validacaoForm.js"></script>
 </body>
 
 </html>
