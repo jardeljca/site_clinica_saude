@@ -1,6 +1,7 @@
 {
   "name": "site_clinica_saude",
   "version": "1.0.0",
+  "type": "module",
   "description": "Site desenvolvido como trabalho final da cadeira de desenvolvimento para plataformas web",
   "main": "index.js",
   "scripts": {
