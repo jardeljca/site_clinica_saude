@@ -1,15 +1,14 @@
-const router = require('express').Router();
-import UserController from '../controllers/UserController';
-const auth = require('../middleware/auth');
+const router = require('express').Router()
 
-router.post('/register', UserController.register); // Rota de registro
-router.post('/login', UserController.login);       // Rota de login
+const UserController = require('../controllers/UserController')
 
-router.get('/protected-route', auth, (req, res) => {
-    res.send('This is a protected route');
-});
+router.post('/register', UserController.register) // Rota de registro
+router.post('/login', UserController.login)// Rota login
+router.get('/checkuser', UserController.checkUser)// Rota token
+router.get('/:id', UserController.getUserById)//Rota usuario pelo Id
+router.patch('/edit/:id',UserController.editUser )//rotas privadas
 
-export default router;
+module.exports = router
 
 
 /* código antes da correção

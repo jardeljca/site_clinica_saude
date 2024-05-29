@@ -1,8 +1,8 @@
-const express =require('express')
+const express = require('express')
 const cors = require('cors')
 const UserRoutes = require('./routes/UserRoutes')
 
-const app =express()
+const app = express()
 
 //configurando resposta JSON
 
