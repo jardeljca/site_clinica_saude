@@ -1,13 +1,15 @@
 const router = require('express').Router();
-const UserController = require('../controllers/UserController');
+import UserController from '../controllers/UserController';
 
 router.post('/register', UserController.register); // Rota de registro
 router.post('/login', UserController.login);       // Rota de login
 
-module.exports = router;
+export default router;
 
 
-/* const router = require('express').Router()
+/* código antes da correção
+
+const router = require('express').Router()
 const UserController = require('../controllers/UserController')
 
 router.post('/register',UserController.register)
