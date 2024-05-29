@@ -1,4 +1,4 @@
-/* importações */
+                                                                                                                                                                                                                            /* importações */
 require('dotenv').config()
 
 const express = require('express')
@@ -17,7 +17,7 @@ import User from './models/User'
 app.use(express.json())
 
 //models
-const User = require('./models/User')
+const User = require('./models/User').default
 
 //uso sessão back  -chamado 
 

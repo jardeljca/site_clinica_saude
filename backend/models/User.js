@@ -1,28 +1,24 @@
-const { Timestamp } = require("mongodb")
+import mongoose, { model } from '../db/conn';
+const { Schema } = mongoose;
 
-const mongoose = require = ('../db/conn')
-const { schema } = mongoose
-
-const User = mongoose.model(
-    'User',
-    new schema(
-        {
-
-            name: {
-                type: String,
-                required: true,
-            },
-            sobre: {
-                type: String,
-                required: false,
-            },
-            senha: {
-                type: String,
-                required: true,
-            },
+const UserSchema = new Schema(
+    {
+        name: {
+            type: String,
+            required: true,
         },
-        { Timestamps: true },
-    ),
-)
+        sobre: {
+            type: String,
+            required: false,
+        },
+        senha: {
+            type: String,
+            required: true,
+        },
+    },
+    { timestamps: true }  // Aqui está corrigido
+);
 
-const exports = User
+const User = model('User', UserSchema);
+
+export default User;  // Aqui está corrigido
