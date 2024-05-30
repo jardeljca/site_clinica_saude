@@ -1,14 +1,14 @@
-const router = require('express').Router()
+const router = require('express').Router();
+import { register, login, checkUser, getUserById, editUser } from '../controllers/UserController';
+import auth from '../middleware/auth';
 
-const UserController = require('../controllers/UserController').default.default
+router.post('/register', register);
+router.post('/login', login);
+router.get('/check', auth, checkUser);
+router.get('/:id', auth, getUserById);
+router.put('/edit', auth, editUser);
 
-router.post('/register', UserController.register) // Rota de registro
-router.post('/login', UserController.login)// Rota login
-router.get('/checkuser', UserController.checkUser)// Rota token
-router.get('/:id', UserController.getUserById)//Rota usuario pelo Id
-router.patch('/edit/:id',UserController.editUser )//rotas privadas
-
-module.exports = router
+export default router;
 
 
 /* código antes da correção
