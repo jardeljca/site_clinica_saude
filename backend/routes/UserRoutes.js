@@ -1,6 +1,6 @@
 const router = require('express').Router()
 
-const UserController = require('../controllers/UserController')
+const UserController = require('../controllers/UserController').default.default
 
 router.post('/register', UserController.register) // Rota de registro
 router.post('/login', UserController.login)// Rota login
