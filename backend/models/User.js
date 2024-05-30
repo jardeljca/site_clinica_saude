@@ -1,5 +1,5 @@
-import mongoose, { model } from '../db/conn';
-const { Schema } = mongoose; // correçao da importação do Schema com S maiúsculo
+import Conec from '../db/conn'
+const { Schema } = mongoose // correçao da importação do Schema com S maiúsculo
 
 const UserSchema = new Schema(
     {
@@ -17,11 +17,11 @@ const UserSchema = new Schema(
         },
     },
     { timestamps: true }  // Aqui está corrigido
-);
+)
 
-const User = model('User', UserSchema);
+const User = model('User', UserSchema)
 
-export default User;  // Aqui está corrigido
+export default User 
 
 
 

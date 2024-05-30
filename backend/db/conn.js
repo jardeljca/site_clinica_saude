@@ -12,11 +12,12 @@ async function main() {
             `mongodb+srv://${dbUser}:${dbPassword}@clusterclinicasaude.7i4e5yq.mongodb.net/?retryWrites=true&w=majority&appName=ClusterClinicaSaude`
         )
         //mongodb+srv://fernandorrdc:Wsd700@clusterclinicasaude.7i4e5yq.mongodb.net/?retryWrites=true&w=majority&appName=ClusterClinicaSaude
-        .then(() =>{
+        .then(() => {
             app.listen(5000)
-    console.log('Conectado ao DB!')
- } )
+            console.log('Conectado ao DB!')
+        })
+    main().catch((err) => console.log(err))
 
 }
-main().catch((err) => console.log(err))
-module.exports = mongoose
+
+module.exports = mongoose.model('Conec', conecSchema)

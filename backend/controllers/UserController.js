@@ -1,12 +1,12 @@
-import { deleteModel } from 'mongoose'
-import creatUserToken from '../helpers/create-user-token'
+//import { deleteModel } from 'mongoose'
+//import creatUserToken from '../helpers/create-user-token'
 
 const User = require('../models/User')
 const creatUserToken = require('../helpers/create-user-token')
 const getToken = require('../helpers/get-token')
 
 const bcrypt = require(bcrypt)
-const jwt =require('jsonwebtoken')
+const jwt = require('jsonwebtoken')
 
 module.exports = class UserController {
 
@@ -132,15 +132,15 @@ module.exports = class UserController {
                 message: 'usuario não encontrado!',
             })
             return
-        } 
-        res.status(200).json({  user })
+        }
+        res.status(200).json({ user })
     }
     static async editUser(req, res) {
         res.status(200).json({
             message: 'Deu certo Update',
         })
         return
-        
+
     }
 
 }
