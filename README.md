@@ -1,7 +1,6 @@
 ## Site_clinica_saude
-Xamarin Forms gallery APP 
 Atividade Desenvolvimento plataforma web 
-Projeto dwsenvolvimento web link em produção  vercel link:
+Projeto desenvolvimento web link em produção  vercel link:
 
 []
 []
@@ -18,7 +17,7 @@ Mongo DB
 Axio Framework 
 
 
-# app desvolvimento no curso plataforma web  link
+# app desevolvimento no curso plataforma web  link
 
 imagem da plataforma web
 
