@@ -20,4 +20,4 @@ async function main() {
 
 }
 
-module.exports = mongoose.model('Conec', conecSchema)
+export {main}

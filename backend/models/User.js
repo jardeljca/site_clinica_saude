@@ -1,4 +1,4 @@
-import Conec from '../db/conn'
+import {main} from '../db/conn'
 const { Schema } = mongoose // correçao da importação do Schema com S maiúsculo
 
 const UserSchema = new Schema(
@@ -22,9 +22,6 @@ const UserSchema = new Schema(
 const User = model('User', UserSchema)
 
 export default User 
-
-
-
 
 /* Como estava o código antes da correção:
 
