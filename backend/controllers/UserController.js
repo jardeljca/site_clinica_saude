@@ -1,10 +1,12 @@
-const User  = require ('../models/User')
-const bcrypt = require ('bcrypt')
-const createUserToken = require ('../helpers/create-user-token')
-//import getToken from '../helpers/get-token'
-//import { genSalt, hash, compare } from 'bcryptjs'
-//import { verify } from 'jsonwebtoken'
+const User = require('../models/User')
+const bcrypt = require('bcrypt')
 
+//hepers
+const createUserToken = require('../helpers/create-user-token')
+const getToken = require('../helpers/get-token')
+
+//import { genSalt, hash, compare } from 'bcryptjs'
+const jwt = require('jsonwebtoken')
 module.exports = class UserController {
 
     static async register(req, res) {
@@ -75,7 +77,7 @@ module.exports = class UserController {
         }
 
         // Checando senha digitada é igual a do banco
-        const checkPassword = await compare(senha, user.senha)
+        const checkPassword = await bcrypt.compare(senha, user.senha)
 
         if (!checkPassword) {
             res.status(422).json({ message: 'Senha inválida' })
@@ -90,7 +92,7 @@ module.exports = class UserController {
 
         if (req.headers.authorization) {
             const token = getToken(req)
-            const decoded = verify(token, 'nossosecret')
+            const decoded = jwt.verify(token, 'nossosecret')
 
             currentUser = await findById(decoded.id)
             currentUser.senha = undefined
@@ -113,7 +115,7 @@ module.exports = class UserController {
     }
 
     static async editUser(req, res) {
-        res.status(200).json({ message: 'Deu certo Update' });
+        res.status(200).json({ message: 'Deu certo Update', })
         return
     }
 }

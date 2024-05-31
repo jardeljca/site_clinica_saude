@@ -1,12 +1,14 @@
+const UserController = require('../controllers/UserController')
+
 const router = require('express').Router()
 //import { register, login, checkUser, getUserById, editUser } from '../controllers/UserController'
 //import auth from '../middleware/auth'
 
-router.post('/register', register)
-router.post('/login', login)
-router.get('/check', auth, checkUser)
-router.get('/:id', auth, getUserById)
-router.put('/edit', auth, editUser)
+router.post('/register',UserController.register)
+router.post('/login',UserController.login)
+router.get('/checkuser',UserController.login)
+router.get('/:id', UserController, getUserById)
+router.put('/edit/:id', UserController, editUser)
 
 module.exports = router
 

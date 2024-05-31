@@ -1,27 +1,12 @@
-import {main} from '../db/conn'
-const { Schema } = mongoose // correçao da importação do Schema com S maiúsculo
 
-const UserSchema = new Schema(
-    {
-        name: {
-            type: String,
-            required: true,
-        },
-        sobre: {
-            type: String,
-            required: false,
-        },
-        senha: {
-            type: String,
-            required: true,
-        },
-    },
-    { timestamps: true }  // Aqui está corrigido
-)
+const User = mongoose.model('User',{
+    
+            name: String,
+            sobre:String,
+            senha:String,
+})
 
-const User = model('User', UserSchema)
-
-export default User 
+modele.exports = User
 
 /* Como estava o código antes da correção:
 
