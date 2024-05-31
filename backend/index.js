@@ -11,9 +11,9 @@ const app = express()
 
 app.use(express.json())
 app.use(express.urlencoded
-({
-    extended:true,
-}),
+    ({
+        extended: true,
+    }),
 
 )
 
@@ -28,15 +28,15 @@ app.use(express.static('public'))
 app.use('/users', UserRoutes)
 
 // Credenciais
-const dbUser = process.env.DB_USER
-const dbPassword = process.env.DB_PASS
+//const dbUser = process.env.DB_USER
+//const dbPassword = process.env.DB_PASS
 
 mongoose.connect(
-    `mongodb+srv://${dbUser}:${dbPassword}@clusterclinicasaude.7i4e5yq.mongodb.net/?retryWrites=true&w=majority&appName=ClusterClinicaSaude`
-    //mongodb+srv://fernandorrdc:<password>@clusterclinicasaude.7i4e5yq.mongodb.net/?retryWrites=true&w=majority&appName=ClusterClinicaSaude
+  `mongodb+srv://adm:12rhldi9pIo21aQM@clusterclinicasaude.7i4e5yq.mongodb.net/?retryWrites=true&w=majority&appName=ClusterClinicaSaude`
+   // `mongodb+srv://${dbUser}:${dbPassword}@clusterclinicasaude.7i4e5yq.mongodb.net/?retryWrites=true&w=majority&appName=ClusterClinicaSaude`
+   
 )
     .then(() => {
-
         console.log('Conectado ao DB!')
         app.listen(5000)
     })

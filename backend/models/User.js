@@ -1,12 +1,12 @@
-
+const mongoose = require('mongoose')
 const User = mongoose.model('User',{
     
             name: String,
-            sobre:String,
-            senha:String,
+            sobre: String,
+            senha: String,
 })
 
-modele.exports = User
+module.exports = mongoose.model('User')
 
 /* Como estava o código antes da correção:
 
