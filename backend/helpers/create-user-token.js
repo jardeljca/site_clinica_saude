@@ -1,4 +1,4 @@
-const jwd = require('jsonwebtoken')
+const jwd = require("jsonwebtoken")
 const creatUserToken = async (user, req, res) => {
    
     //creando token

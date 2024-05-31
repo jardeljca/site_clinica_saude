@@ -1,28 +1,29 @@
-import User, { findOne, findById } from '../models/User';
-import createUserToken from '../helpers/create-user-token';
-import getToken from '../helpers/get-token';
-import { genSalt, hash, compare } from 'bcryptjs';
-import { verify } from 'jsonwebtoken';
+const User  = require ('../models/User')
+const bcrypt = require ('bcrypt')
+const createUserToken = require ('../helpers/create-user-token')
+//import getToken from '../helpers/get-token'
+//import { genSalt, hash, compare } from 'bcryptjs'
+//import { verify } from 'jsonwebtoken'
 
-export default class UserController {
+module.exports = class UserController {
 
     static async register(req, res) {
-        const { name, email, senha } = req.body;
+        const { name, email, senha } = req.body
 
         // Validações
         if (!name) {
-            res.status(422).json({ message: 'Nome é Obrigatório' });
-            return;
+            res.status(422).json({ message: 'Nome é Obrigatório' })
+            return
         }
 
         if (!email) {
-            res.status(422).json({ message: 'Email é Obrigatório' });
-            return;
+            res.status(422).json({ message: 'Email é Obrigatório' })
+            return
         }
 
         if (!senha) {
             res.status(422).json({ message: 'Senha é Obrigatória' });
-            return;
+            return
         }
 
         // Checar se usuário existe
@@ -30,19 +31,19 @@ export default class UserController {
 
         if (userExists) {
             res.status(422).json({ message: 'Email já cadastrado, use outro' });
-            return;
+            return
         }
 
         // Criando senha
-        const salt = await genSalt(12);
-        const passwordHash = await hash(senha, salt);
+        const salt = await bcrypt.genSalt(12)
+        const passwordHash = await bcrypt.hash(senha, salt)
 
         // Criando usuário
         const user = new User({
             name,
             email,
             senha: passwordHash,
-        });
+        })
 
         try {
             const newUser = await user.save();
@@ -57,62 +58,62 @@ export default class UserController {
 
         if (!email) {
             res.status(422).json({ message: 'Email é Obrigatório' });
-            return;
+            return
         }
 
         if (!senha) {
             res.status(422).json({ message: 'Senha é Obrigatória' });
-            return;
+            return
         }
 
         // Checar se usuário existe
         const user = await findOne({ email: email });
 
         if (!user) {
-            res.status(422).json({ message: 'Não há usuário cadastrado com esse email' });
-            return;
+            res.status(422).json({ message: 'Não há usuário cadastrado com esse email' })
+            return
         }
 
         // Checando senha digitada é igual a do banco
-        const checkPassword = await compare(senha, user.senha);
+        const checkPassword = await compare(senha, user.senha)
 
         if (!checkPassword) {
-            res.status(422).json({ message: 'Senha inválida' });
-            return;
+            res.status(422).json({ message: 'Senha inválida' })
+            return
         }
 
-        await createUserToken(user, req, res);
+        await createUserToken(user, req, res)
     }
 
     static async checkUser(req, res) {
-        let currentUser;
+        let currentUser
 
         if (req.headers.authorization) {
-            const token = getToken(req);
-            const decoded = verify(token, 'nossosecret');
+            const token = getToken(req)
+            const decoded = verify(token, 'nossosecret')
 
-            currentUser = await findById(decoded.id);
-            currentUser.senha = undefined;
+            currentUser = await findById(decoded.id)
+            currentUser.senha = undefined
         } else {
-            currentUser = null;
+            currentUser = null
         }
 
-        res.status(200).send(currentUser);
+        res.status(200).send(currentUser)
     }
 
     static async getUserById(req, res) {
-        const id = req.params.id;
+        const id = req.params.id
         const user = await findById(id).select('-senha');
 
         if (!user) {
-            res.status(422).json({ message: 'Usuário não encontrado!' });
-            return;
+            res.status(422).json({ message: 'Usuário não encontrado!' })
+            return
         }
-        res.status(200).json({ user });
+        res.status(200).json({ user })
     }
 
     static async editUser(req, res) {
         res.status(200).json({ message: 'Deu certo Update' });
-        return;
+        return
     }
-};
+}

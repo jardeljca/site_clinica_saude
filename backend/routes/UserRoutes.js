@@ -1,14 +1,14 @@
-const router = require('express').Router();
-import { register, login, checkUser, getUserById, editUser } from '../controllers/UserController';
-import auth from '../middleware/auth';
+const router = require('express').Router()
+//import { register, login, checkUser, getUserById, editUser } from '../controllers/UserController'
+//import auth from '../middleware/auth'
 
-router.post('/register', register);
-router.post('/login', login);
-router.get('/check', auth, checkUser);
-router.get('/:id', auth, getUserById);
-router.put('/edit', auth, editUser);
+router.post('/register', register)
+router.post('/login', login)
+router.get('/check', auth, checkUser)
+router.get('/:id', auth, getUserById)
+router.put('/edit', auth, editUser)
 
-export default router;
+module.exports = router
 
 
 /* código antes da correção
