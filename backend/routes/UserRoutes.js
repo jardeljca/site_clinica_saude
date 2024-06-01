@@ -1,6 +1,8 @@
-const UserController = require('../controllers/UserController')
 
 const router = require('express').Router()
+const UserController = require('../controllers/UserController')
+
+
 //import { register, login, checkUser, getUserById, editUser } from '../controllers/UserController'
 //import auth from '../middleware/auth'
 

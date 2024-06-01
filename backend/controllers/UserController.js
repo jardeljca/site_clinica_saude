@@ -6,6 +6,7 @@ const createUserToken = require('../helpers/create-user-token')
 const getToken = require('../helpers/get-token')
 
 //import { genSalt, hash, compare } from 'bcryptjs'
+
 const jwt = require('jsonwebtoken')
 module.exports = class UserController {
 
