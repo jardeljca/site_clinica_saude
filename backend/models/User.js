@@ -3,6 +3,7 @@ const User = mongoose.model('User',{
     
             name: String,
             sobre: String,
+            email: String,
             senha: String,
 })
 

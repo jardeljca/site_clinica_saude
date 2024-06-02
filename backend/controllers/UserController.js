@@ -2,8 +2,8 @@ const User = require('../models/User')
 const bcrypt = require('bcrypt')
 
 //hepers
-const createUserToken = require('../helpers/create-user-token')
-const getToken = require('../helpers/get-token')
+//const createUserToken = require('../helpers/create-user-token')
+//const getToken = require('../helpers/get-token')
 
 //import { genSalt, hash, compare } from 'bcryptjs'
 
@@ -11,7 +11,7 @@ const jwt = require('jsonwebtoken')
 module.exports = class UserController {
 
     static async register(req, res) {
-        const { name, email, senha } = req.body
+        const { name,sobre, email, senha } = req.body
 
         // Validações
         if (!name) {
@@ -30,7 +30,7 @@ module.exports = class UserController {
         }
 
         // Checar se usuário existe
-        const userExists = await findOne({ email });
+        const userExists = await findOne({email: email});
 
         if (userExists) {
             res.status(422).json({ message: 'Email já cadastrado, use outro' });
@@ -44,6 +44,7 @@ module.exports = class UserController {
         // Criando usuário
         const user = new User({
             name,
+            sobre,
             email,
             senha: passwordHash,
         })
