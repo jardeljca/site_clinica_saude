@@ -30,7 +30,7 @@ module.exports = class UserController {
         }
 
         // Checar se usuário existe
-        const userExists = await findOne({ email: email });
+        const userExists = await findOne({ email });
 
         if (userExists) {
             res.status(422).json({ message: 'Email já cadastrado, use outro' });
@@ -58,20 +58,20 @@ module.exports = class UserController {
     }
 
     static async login(req, res) {
-        const { email, senha } = req.body;
+        const { email, senha } = req.body
 
         if (!email) {
-            res.status(422).json({ message: 'Email é Obrigatório' });
+            res.status(422).json({ message: 'Email é Obrigatório' })
             return
         }
 
         if (!senha) {
-            res.status(422).json({ message: 'Senha é Obrigatória' });
+            res.status(422).json({ message: 'Senha é Obrigatória' })
             return
         }
 
         // Checar se usuário existe
-        const user = await findOne({ email: email });
+        const user = await findOne({ email: email })
 
         if (!user) {
             res.status(422).json({ message: 'Não há usuário cadastrado com esse email' })
@@ -120,5 +120,6 @@ module.exports = class UserController {
         res.status(200).json({ message: 'Deu certo Update', })
         return
     }
+    
 
 }
