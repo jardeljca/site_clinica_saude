@@ -31,7 +31,7 @@ app.use('/users', UserRoutes)
 //const dbPassword = process.env.DB_PASS
 
 mongoose.connect(
-  `mongodb+srv://adm:12rhldi9pIo21aQM@clusterclinicasaude.7i4e5yq.mongodb.net/?retryWrites=true&w=majority&appName=ClusterClinicaSaude`
+  `mongodb+srv://engerproducao:Wsd700@cluster0.c6q0kv2.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`
    // `mongodb+srv://${dbUser}:${dbPassword}@clusterclinicasaude.7i4e5yq.mongodb.net/?retryWrites=true&w=majority&appName=ClusterClinicaSaude`
    
 )
