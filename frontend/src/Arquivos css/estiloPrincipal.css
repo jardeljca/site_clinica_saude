@@ -33,7 +33,7 @@ body {
     width: 100%;
     font-size: 85%;
     background: linear-gradient(125deg, rgba(23, 162, 184, 1) 35%, rgba(255, 255, 255, 1) 100%);
-    padding: 0;
+    padding: 15px;
 }
 
 .dropdown {
