@@ -2,22 +2,23 @@
 Atividade Desenvolvimento plataforma web 
 Projeto desenvolvimento web link em produção  vercel link:
 
-[]
-[]
-[]
-[]
+[x]
+[x]
+[x]
+[x]
+
+**O que usamos 
+*nodejs
+*html 
+*css
+*Typescript
+*Styled componentes
+*Mongo DB
+*Api
+*Axios Framework 
 
 
-O que usamos 
-nodejs
-Rect
-Typescript
-Styled componentes
-Mongo DB
-Axio Framework 
-
-
-# app desevolvimento no curso plataforma web  link
+# app desevolvimento no curso plataforma web 
 
 imagem da plataforma web
 
@@ -29,14 +30,14 @@ HTML5 CSS JAVASCRIPT GIT GITHUB JAVA MYSQL NODEJS MONGODB
 voce pode aproveitar e pode conhecer  projeto já em desenvolvimento plataforma , que estão disponíveis aqui nos repositórios. =)
 
  ## Agenda
-Projeto Plataforma  simula um agenda de contatos onde pacientes poderão fazer suas solicitações de chamada cadastrais deretamente pelo portal
+Noss Projeto e Plataforma  simula uma agenda de contatos onde pacientes poderão fazer suas solicitações de chamada cadastrais deretamente pelo portal
 facilitando sua consulta e atendimento reservando horarios das consultas otimizando tempo e trazendo uma melhor logistica em tempo e horarios .
 
 🔨 Funcionalidades do projeto
-O projeto é capaz de cadastrar, editar e remover contatos com nome, telefone e e-mail e faz a listagem dos mesmos apresentando apenas o nome:
+O projeto é capaz de cadastrar, editar e remover ou excluir contatos com nome, telefone e e-mail. Fazendo  busca listagem dos mesmos apresentando apenas o nome:
 
 ✔️ Técnicas e tecnologias utilizadas
-O App foi desenvolvido no JAVA MONGO HTML CSS NODEJS UTILIZANDO ROTAS API E ALGUNS FRAME BIBLIOTECAS NA COMPILAÇÃO COM NODE. Segue abaixo as técnicas e tecnologias utilizadas:
+O App foi desenvolvido no java mongo html css node api rotas compilando framework utilizando algumas bibliotecas  na compilação do codigo. Segue abaixo as técnicas e tecnologias utilizadas:
 
 site_clinica_saude
 
@@ -56,4 +57,5 @@ Cliente Após baixar o projeto voce pode realizar seu cadastro utilizando seu no
 Open an Existing Project (ou alguma opção similar) Procure o local onde o projeto está e o selecione (Caso o projeto seja baixado via zip, é necessário extraí-lo antes de procurá-lo) Por fim clique em OK O web Studio deve executar algumas tasks do Gradle para configurar o projeto, aguarde até finalizar. Ao finalizar as tasks, você pode executar o App 🏆
 
 📚 Mais informações da plataforma 
+
 Gostou do projeto e quer conhecer mais Você pode acessar o curso que desenvolve o projeto desde o começo!
