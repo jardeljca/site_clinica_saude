@@ -1,0 +1,415 @@
+/* Tamanho do body e html */
+
+html {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    width: 90vw;
+}
+
+/* Tamanho do container header será sempre 20% da altura total da tela, independete do tamanho da mesma */
+.container_head {
+    height: 20vh;
+}
+
+/* Tamanho da logo do header */
+.container_head img {
+    height: 120px;
+}
+
+/* Estilização da fonte do h1 com nome da clinica */
+.container_head h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+
+/* Tamanho do container corpo será sempre 70% da altura total da tela, independete do tamanho da mesma  */
+.container_corpo {
+    height: 67vh;
+    width: 100%;
+    font-size: 85%;
+    background: linear-gradient(125deg, rgba(23, 162, 184, 1) 35%, rgba(255, 255, 255, 1) 100%);
+    padding: 0;
+}
+
+.dropdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Tamanho da fonte do menu droppdoown */
+.dropdown .dropdown-menu {
+    font-size: 13px;
+}
+
+/* A estilização do botão abaixo é referente aos botões presente nos cabeçakhos apenas das páginas de login e cadastro */
+.container_corpo .btn {
+    cursor: pointer;
+}
+
+/* Tamanho da imagem do boneco */
+.container_corpo img {
+    height: 200px;
+}
+
+/* Estilização do formulario das telas de login e cadastro */
+
+.formulario h3 {
+    color: #fff;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_corpo form {
+    width: 500px;
+    height: 300px;
+    padding: 20px;
+    color: #000;
+    border: 1px solid black;
+    overflow: auto;
+}
+
+.container_corpo .form input {
+    border: #000 2px solid;
+}
+
+.container_corpo .form i {
+    visibility: hidden;
+}
+
+.container_corpo .form small {
+    font: bold;
+    visibility: hidden;
+}
+
+/* Estilização da validação do formilário */
+
+.container_corpo .form .sucesso input {
+    border-color: #02923e;
+}
+
+.container_corpo .form .erro input {
+    border-color: #ff1900;
+}
+
+.container_corpo .form .sucesso i.fa-circle-check {
+    color: #02923e;
+    visibility: visible;
+}
+
+.container_corpo .form .erro i.fa-circle-exclamation {
+    color: #ff1900;
+    visibility: visible;
+}
+
+.container_corpo .form .erro small {
+    visibility: visible;
+    color: #ff1900;
+}
+
+
+/* Estilização do corpo da tela de gesta adm */
+
+.container_corpo .conteudo_corpo {
+    display: flex;
+    width: 100%;
+    height: 70%;
+    padding: 0;
+}
+
+.container_corpo .botoes {
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteudo_corpo .btn {
+    width: 60%;
+    margin: 20px;
+    border: #000 solid 1px;
+    border-radius: 20px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #6CC4D2;
+}
+
+.conteudo_corpo .btn:hover {
+    background-color: #DBE7E8;
+}
+
+.container_corpo .news {
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: linear-gradient(125deg, rgba(23, 162, 184, 1) 35%, rgba(255, 255, 255, 1) 100%);
+}
+
+.container_corpo .noticias {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+
+.conteudo_corpo .corpo_news {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.conteudo_corpo a {
+    word-wrap: break-word;
+    font-weight: bold;
+    color: blue;
+}
+
+
+/* Estilização do footer */
+.container_footer {
+    height: 10vh;
+}
+
+/* ################################################################################# */
+/* Aqui estão as configurações responsivas para telas maiores que 601px e menores que 800px */
+@media screen and (min-width: 601px) and (max-width: 800px) {
+
+    /* Tamanho da logo do header */
+    .container_head img {
+        height: 110px;
+    }
+
+    /* Estilização do tamanho do h1 com nome da clinica */
+    .container_head h1 {
+        font-size: 25px;
+    }
+
+    /* Tamanho da fonte do menu droppdoown */
+    .dropdown .dropdown-menu {
+        font-size: 14px;
+    }
+
+    /* Tamanho da imagem do boneco */
+    .container_corpo img {
+        height: 150px;
+    }
+
+    /* Estilização do formulario das telas de login e cadastro */
+
+    .container_corpo form {
+        width: 400px;
+    }
+
+    /* Estilização do corpo da tela de gesta adm */
+
+    .container_corpo .conteudo_corpo {
+        height: 60%;
+        justify-content: space-around;
+    }
+
+    .conteudo_corpo .btn {
+        width: auto;
+        margin: 10px;
+    }
+
+    .container_corpo .news {
+        width: 60%;
+    }
+
+    .conteudo_corpo .corpo_news {
+        margin: 15px;
+    }
+
+    .container_footer p {
+        font-size: 12px;
+    }
+}
+
+/* ################################################################################# */
+/* Aqui estão as configurações responsivas para telas maiores que 371px e menores que 600px */
+@media screen and (min-width: 371px) and (max-width: 600px) {
+
+    /* Tamanho da logo no reader */
+    .container_head img {
+        height: 90px;
+    }
+
+    /* Estilização do tamanho do h1 com nome da clinica */
+    .container_head h1 {
+        font-size: 18px;
+    }
+
+    .dropdown .btn {
+        font-size: 14px;
+        white-space: pre-line;
+        padding: 0;
+    }
+
+    /* Tamanho da fonte do menu droppdoown */
+    .dropdown .dropdown-menu {
+        font-size: 13px;
+    }
+
+    /* A estilização do botão abaixo é referente aos botões presente nos cabeçakhos apenas das páginas de login e cadastro */
+    .botao {
+        white-space: pre-line;
+        font-size: 14px;
+    }
+
+    /* Tamanho da imagem definida */
+    .container_corpo img {
+        height: 150px;
+    }
+
+    .container_corpo p {
+        font-size: 15px;
+    }
+
+    /* Estilização do formulario das telas de login e cadastro */
+
+    .container_corpo form {
+        width: 250px;
+    }
+
+    /* Estilização do corpo da tela de gesta adm */
+
+    .container_corpo .conteudo_corpo {
+        height: 90%;
+        justify-content: space-around;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .conteudo_corpo .botoes {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .conteudo_corpo .btn {
+        width: auto;
+        margin: 2px;
+        font-size: 12px;
+        padding: 3px;
+    }
+
+    .container_corpo .news {
+        width: 100%;
+        overflow: auto;
+        margin: 5px;
+    }
+
+    .container_corpo .news a {
+        text-align: center;
+    }
+
+    .container_footer p {
+        font-size: 12px;
+    }
+}
+
+/* ################################################################################# */
+/* Aqui estão as cpnfigurações responsivas para telas maiores que 261px e menores que 370px */
+@media screen and (min-width: 261px) and (max-width: 370px) {
+
+    /* Tamanho da logo no reader */
+    .container_head img {
+        height: 50px;
+    }
+
+    /* Estilização do tamanho do h1 com nome da clinica */
+    .container_head h1 {
+        font-size: 15px;
+    }
+
+    .dropdown .btn {
+        font-size: 13px;
+        white-space: pre-line;
+        padding: 0;
+    }
+
+    /* Tamanho da fonte do menu droppdoown */
+    .dropdown .dropdown-menu {
+        font-size: 12px;
+    }
+
+    /* A estilização do botão abaixo é referente aos botões presente nos cabeçakhos apenas das páginas de login e cadastro */
+    .botao {
+        white-space: pre-line;
+        font-size: 12px;
+    }
+
+    /* Tamanho da imagem definida */
+    .container_corpo img {
+        height: 120px;
+    }
+
+    .container_corpo p {
+        font-size: 12px;
+    }
+
+    /* Estilização do formulario das telas de login e cadastro */
+
+    .container_corpo form {
+        width: 200px;
+    }
+
+    /* Estilização do corpo da tela de gesta adm */
+
+    .container_corpo .conteudo_corpo {
+        height: 90%;
+        justify-content: space-around;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .conteudo_corpo .btn {
+        width: auto;
+        margin: 2px;
+        font-size: 12px;
+        padding: 3px;
+    }
+
+    .container_corpo .news {
+        width: 100%;
+        overflow: auto;
+        margin: 5px;
+    }
+
+    .container_corpo .news a {
+        text-align: center;
+    }
+
+    .container_footer p {
+        font-size: 9px;
+    }
+}
+
+/* ################################################################################# */
+/* Aqui estão as configurações responsivas para telas menores que 260px */
+@media screen and (min-width: 100px) and (max-width: 260px) {
+    body {
+        display: none;
+    }
+}
