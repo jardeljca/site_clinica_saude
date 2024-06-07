@@ -20,10 +20,9 @@ Projeto desenvolvimento web link em produção  vercel link:
 
 # app desevolvimento no curso plataforma web 
 
+imagem da logo clinica_saude
+![Uploading image.png…]()
 
-![image](https://github.com/jardeljca/site_clinica_saude/assets/121472887/544a49a7-dd85-4210-8eb6-b031e6c5ea02)
-
-imagem da logo plataforma web
 
 
 
