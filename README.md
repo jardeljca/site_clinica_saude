@@ -1,21 +1,12 @@
 ## Site_clinica_saude
 Atividade Desenvolvimento plataforma web 
-Projeto desenvolvimento web link em produção  vercel link:
-
-[]
-[]
-[]
-[]
+Projeto desenvolvimento web link em produção:
 
 
 O que usamos 
-nodejs
-Rect
-Typescript
-Styled componentes
-Mongo DB
-Axio Framework 
-
+HTML CSS
+NODE JS
+MONGO DB
 
 # app desevolvimento no curso plataforma web  link
 
@@ -23,7 +14,7 @@ imagem da plataforma web
 
 
 🖥️ Tecnologias e Ferramentas:
-HTML5 CSS JAVASCRIPT GIT GITHUB JAVA MYSQL NODEJS MONGODB
+HTML5 CSS JAVASCRIPT GIT GITHUB JAVA NODEJS MONGODB
 
 📫 Você pode falar com nossa equipe pelo Instagram ou pelo Twitter
 voce pode aproveitar e pode conhecer  projeto já em desenvolvimento plataforma , que estão disponíveis aqui nos repositórios. =)
